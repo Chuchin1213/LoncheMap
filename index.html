@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LoncheMap</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/globe.gl"></script>
+</head>
+<body>
+    <h1>LoncheMap</h1>
+    <p>🔥 ARRIBA LA FES 🔥</p>
+
+    <div id="globo"></div>
+
+    <div id="sidebar-videos" class="sidebar">
+        <div class="sidebar-header">
+            <h2 id="sidebar-titulo"></h2>
+            <span class="close-btn" onclick="cerrarSidebar()">&times;</span>
+        </div>
+        <div class="sidebar-content">
+            <ul id="lista-videos" class="sidebar-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
