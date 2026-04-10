@@ -1,18 +1,16 @@
-/* Reset total para quitar bordes blancos */
 * {
     margin: 0;
     padding: 0;
-    box-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #000;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* Evita scrolls raros */
+    overflow: hidden;
 }
 
-/* El globo debe ser el fondo de todo */
 #globo {
     position: absolute;
     top: 0;
@@ -24,49 +22,43 @@ body {
 
 h1, p {
     position: relative;
-    z-index: 10; /* Encima del globo */
+    z-index: 10;
     text-align: center;
-    pointer-events: none; /* Para que no estorben al hacer click al globo */
+    pointer-events: none;
+    margin-top: 10px;
 }
 
-h1 { margin-top: 20px; color: #ffcc00; font-size: 2.5rem; }
-p { color: #00ffff; font-weight: bold; }
+h1 { color: #ffcc00; font-size: 2rem; }
+p { color: #00ffff; }
 
-/* SIDEBAR (La pestaña lateral) */
+/* Barra Lateral */
 .sidebar {
     position: fixed;
-    right: -350px; /* Escondida */
+    right: -350px;
     top: 0;
     width: 320px;
     height: 100%;
-    background: rgba(0, 15, 10, 0.95);
+    background: rgba(0, 20, 10, 0.95);
     border-left: 3px solid #32ff32;
     transition: 0.4s ease-in-out;
     z-index: 100;
-    color: white;
+    padding: 20px;
 }
 
-.sidebar.active {
-    right: 0; /* Aparece */
-}
+.sidebar.active { right: 0; }
 
 .sidebar-header {
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #32ff32;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.close-btn { cursor: pointer; font-size: 24px; color: #32ff32; }
+.close-btn { cursor: pointer; color: #32ff32; font-size: 30px; }
 
-/* Lista de videos con imágenes */
-.sidebar-list {
-    list-style: none;
-    padding: 15px;
-    overflow-y: auto;
-    height: calc(100% - 80px);
-}
+.sidebar-list { list-style: none; }
 
 .video-item {
     display: block;
@@ -74,25 +66,13 @@ p { color: #00ffff; font-weight: bold; }
     background: rgba(50, 255, 50, 0.1);
     border-radius: 8px;
     margin-bottom: 15px;
-    overflow: hidden;
     border: 1px solid transparent;
     transition: 0.3s;
+    overflow: hidden;
 }
 
-.video-item:hover {
-    border-color: #32ff32;
-    transform: translateY(-2px);
-}
+.video-item:hover { border-color: #32ff32; }
 
-.video-thumb {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+.video-thumb { width: 100%; display: block; }
 
-.video-title {
-    display: block;
-    padding: 10px;
-    color: white;
-    font-size: 0.9rem;
-}
+.video-title { display: block; padding: 10px; color: white; font-size: 0.9rem; }
